@@ -1,0 +1,10 @@
+.container{
+    display: inline-flex;
+    align-content: baseline;
+}
+
+.chatbox{
+    width: 80vw;
+    height: 200px;
+    border: 1px solid black;
+}

@@ -7,8 +7,8 @@
 
 .dropzone__container {
   display: flex;
-  width: 18rem;
-  height: 18rem;
+  /* width: 18rem;
+  height: 18rem; */
   /* padding: 0.75rem 0.75rem 0.75rem .75rem; */
   justify-content: space-between;
   align-items: center;
@@ -23,9 +23,6 @@
     justify-content: center;
     align-items: center;
     gap: 0.375rem;
-}
-.dropzone__container.image-uploaded{
-    background-color: #d4cee5;
 }
 
 .dropzone__label__text {
@@ -72,10 +69,5 @@ ngx-dropzone-image-preview{
     }
 }
 
-ngx-dropzone-remove-badge::after{
-    content: 'Hi there';
-        /* background-image: url('../../../assets/upload-images/icn-trash-2.svg') */
-    
-}
 
 

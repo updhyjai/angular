@@ -1,8 +1,8 @@
 <!-- <ngx-dropzone (change)="onSelect($event)" [multiple]="false" > -->
-<div class="dropzone__container"  [ngClass]="{'image-uploaded' : isUploaded}" (change)="onSelect($event)" [multiple]="false" ngx-dropzone>
+<div class="dropzone__container" [ngStyle]="{'width':width, 'height': height }" (change)="onSelect($event)" [multiple]="false" ngx-dropzone>
   <ngx-dropzone-label>
     <div class="dropzone__label__container">
-      <div class="dropzone__label__image">
+      <div *ngIf="getLabelImagePath" class="dropzone__label__image">
         <img src="{{ getLabelImagePath }}" alt="upload" />
       </div>
       <div class="dropzone__label__text">{{ getLabelText }}</div>
