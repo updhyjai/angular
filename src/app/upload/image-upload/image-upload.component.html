@@ -1,0 +1,22 @@
+<!-- <ngx-dropzone (change)="onSelect($event)" [multiple]="false" > -->
+<div class="dropzone__container"  [ngClass]="{'image-uploaded' : isUploaded}" (change)="onSelect($event)" [multiple]="false" ngx-dropzone>
+  <ngx-dropzone-label>
+    <div class="dropzone__label__container">
+      <div class="dropzone__label__image">
+        <img src="{{ getLabelImagePath }}" alt="upload" />
+      </div>
+      <div class="dropzone__label__text">{{ getLabelText }}</div>
+    </div>
+  </ngx-dropzone-label>
+  <!-- <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)"> -->
+  <ngx-dropzone-image-preview
+    ngProjectAs="ngx-dropzone-preview"
+    *ngFor="let f of getFiles"
+    [file]="f"
+    [removable]="true"
+    (removed)="onRemove(f)"
+  >
+    <!-- <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label> -->
+  </ngx-dropzone-image-preview>
+</div>
+<!-- </ngx-dropzone> -->
